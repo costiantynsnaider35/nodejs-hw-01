@@ -1,3 +1,12 @@
-export const removeAllContacts = async () => {};
+import { writeContacts } from '../utils/writeContacts.js';
+
+export const removeAllContacts = async () => {
+  try {
+    const emptyArrayContacts = [];
+    await writeContacts(emptyArrayContacts);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 removeAllContacts();
