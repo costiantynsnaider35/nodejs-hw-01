@@ -1,5 +1,5 @@
 import { PATH_DB } from '../constants/contacts.js';
-import * as fs from 'fs/promises';
+import fs from 'node:fs/promises';
 
 export const writeContacts = async (updatedContacts) => {
   const contacts = JSON.stringify(updatedContacts, null, 2);
